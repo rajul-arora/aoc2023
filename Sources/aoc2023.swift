@@ -15,12 +15,7 @@ struct aoc2023: ParsableCommand {
             throw CommandLineError.invalidDay
         }
 
-        let baseDirectory = FileManager.default.currentDirectoryPath
-        let url = URL(fileURLWithPath: "\(baseDirectory)/\(pathToInputFile)")
-        let input = try String(contentsOf: url, encoding: .utf8)
-        
-        debugPrint(input)
-
+        let input = try String(fileFromRelativePath: pathToInputFile) 
         try runDay(day: day, input: input)
     }
 
