@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "aoc2023",
+    platforms: [.macOS("13.0")],
     dependencies: [
     // other dependencies
         .package(
