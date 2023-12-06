@@ -16,7 +16,11 @@ struct aoc2023: ParsableCommand {
         }
 
         let input = try String(fileFromRelativePath: pathToInputFile) 
+
+        let start = Date()
         try runDay(day: day, input: input)
+
+        debugPrint("Execution took \(abs(start.timeIntervalSinceNow)) seconds")
     }
 
     private func runDay(day: Int, input: String) throws {
@@ -29,6 +33,8 @@ struct aoc2023: ParsableCommand {
                 try Day3.run(input: input)
             case 4: 
                 try Day4.run(input: input)
+            case 5:
+                try Day5.run(input: input)
             default:
                 break
        }
