@@ -27,7 +27,11 @@ struct Day7 {
             by: { Self.type(for: $0) }
         )
  
-        let total = Self.calculateWinnings(groupedHands: grouped, handsToBidMap: handsToBidMap)
+        let total = Self.calculateWinnings(
+            groupedHands: grouped, 
+            handsToBidMap: handsToBidMap
+        )
+
         debugPrint(total)
     }
 
@@ -110,8 +114,7 @@ struct Day7 {
         - Three of a kind, where three cards have the same label, and the remaining two cards are each different from any other card in the hand: TTT98 -> 3
         - Two pair, where two cards share one label, two other cards share a second label, and the remaining card has a third label: 23432 -> 2
         - One pair, where two cards share one label, and the other three cards have a different label from the pair and each other: A23A4 -> 1
-        - High card, where all cards' labels are distinct: 23456 -> 0
-    
+        - High card, where all cards' labels are distinct: 23456 -> 0 
     */
     private static func type(for hand: String) -> Int {
         let map = Self.frequencyMap(for: hand)

@@ -20,7 +20,7 @@ struct aoc2023: ParsableCommand {
         let start = Date()
         try runDay(day: day, input: input)
 
-        debugPrint("Execution took \(abs(start.timeIntervalSinceNow)) seconds")
+        debugPrint("Execution took \(Date.now.timeIntervalSince(start).formatted()) seconds")
     }
 
     private func runDay(day: Int, input: String) throws {
