@@ -35,6 +35,8 @@ struct aoc2023: ParsableCommand {
                 try Day4.run(input: input)
             case 5:
                 try Day5.run(input: input)
+            case 6:
+                try Day6.run(input: input)
             default:
                 break
        }
