@@ -12,12 +12,17 @@ let package = Package(
             url: "https://github.com/apple/swift-argument-parser", 
             from: "1.2.0"
         ),
+        .package(
+            url: "https://github.com/davecom/SwiftGraph",
+            from: "3.1.0"
+        )
     ],
     targets: [
         .executableTarget(
             name: "aoc2023",
             dependencies: [
-                .product(name: "ArgumentParser", package: "swift-argument-parser")
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "SwiftGraph", package: "SwiftGraph")
             ]
         ),
     ]
