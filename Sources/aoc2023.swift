@@ -43,6 +43,8 @@ struct aoc2023: ParsableCommand {
                 try Day8.run(input: input)
             case 9:
                 try Day9.run(input: input)
+            case 10:
+                try Day10.run(input: input)
             default:
                 fatalError("Invalid Day!")
        }
